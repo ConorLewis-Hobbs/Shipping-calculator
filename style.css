@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(230, 255, 253, 1) 100%);
+    margin: 2rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.title {
+    width: 75%;
+    margin-bottom: 1%;
+    min-width: 450px;
+}
+
+.explanation {
+    width: 75%;
+    margin-bottom: 2%;
+    min-width: 450px;
+}
+
+.shippingCalculator {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 100px;
+    margin-bottom: 1%;
+}
+
+.container {
+    display: grid;
+    width: 50%;
+    min-width: 450px;
+    box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.75);
+    border: 1px solid black;
+    background-color: aliceblue;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "name postcode" "days-to-deliver price" "availability availability" "can-be-delivered can-be-delivered" "will-arrive-in . ";
+}
+
+.name {
+    grid-area: name;
+}
+
+.postcode {
+    grid-area: postcode;
+}
+
+.days-to-deliver {
+    grid-area: days-to-deliver;
+}
+
+.price {
+    grid-area: price;
+}
+
+.availability {
+    grid-area: availability;
+}
+
+.can-be-delivered {
+    grid-area: can-be-delivered;
+}
+
+.will-arrive-in {
+    grid-area: will-arrive-in;
+}

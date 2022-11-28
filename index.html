@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Calculate shipping</h1>
+    </div>
+    <div class="explanation">
+        <p>
+            Using an postcode imputed by the user, the shipping calculator checks the input against a shipping data object finding the matching city. The rest of the fields are then filed in with the rest of that cities data.
+        </p>
+        <p>
+            The possible delivery days are then checked against the current date to see if the package can be sent today. If the package cannot be sent today, the package will be sent on the next available day.
+        </p>
+        <p>
+            The estimated delivery date is then calculated using the days to deliver field added to today's date.
+        </p>
+    </div>
+    <div class="shippingCalculator">
+        <input class="input" type="text" id="postcodeInput" name="postcode" placeholder="Enter postcode" minlength="2" maxlength="10" required/>
+        <div id="result"></div>
+        <div class="container">
+            <div class="name">
+                <div class="cityName">
+                    City Name
+                </div>
+                <div class="name-change" id="name-change">
+                </div>
+            </div>
+            <div class="postcode">
+                <div class="cityName">
+                    Postcode
+                </div>
+                <div class="postcode-change" id="postcode-change">
+                </div>
+            </div>
+            <div class="days-to-deliver">
+                <div class="DaysToDeliver">
+                    Days to Deliver
+                </div>
+                <div class="days-to-deliver-change" id="days-to-deliver-change">
+                </div>
+            </div>
+            <div class="price">
+                <div class="priceOfDelivery">
+                    Delivery cost
+                </div>
+                <div class="price-change" id="price-change">
+                </div>
+            </div>
+            <div class="availability">
+                <div class="possibleDeliveryDates">
+                    Can be delivered on
+                </div>
+                <div class="availability-change" id="availability-change">
+                </div>
+            </div>
+            <div class="can-be-delivered">
+                <div class="deliveryPossible">
+                    When will the item be sent
+                </div>
+                <div class="can-be-delivered" id="can-be-delivered">
+                </div>
+            </div>
+            <div class="will-arrive-in">
+                <div class="willArriveIn">
+                    Your package will arrive on
+                </div>
+                <div class="will-arrive-in" id="will-arrive-in">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
